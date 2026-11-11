@@ -20,6 +20,7 @@
       <span class="brand-word" aria-hidden="true"></span>
     </a>
     <nav class="main-nav" aria-label="Principal">
+      <a href="#nueva">Nuevo</a>
       <a href="#categorias">Categorías</a>
       <a href="#catalogo" data-filter-link="mujer">Mujer</a>
       <a href="#catalogo" data-filter-link="hombre">Hombre</a>
@@ -31,7 +32,6 @@
   <main>
     <!-- ========== HERO: TIPOGRAFÍA + ROSTRO (FRANCISCO) ========== -->
     <section class="hero" aria-label="Train for longevity">
-      <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-poster">
         <h1 class="hero-type" aria-label="Train for longevity">
           <span class="l l1">TRAIN</span>
@@ -49,6 +49,13 @@
         <p class="hero-foot">CATÁLOGO DIGITAL · 2026<br/>EDICIÓN 01</p>
       </div>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Train for longevity</span><i></i><span>Nueva colección 02 · Longevity</span><i></i><span>Cruzfit Active Wear</span><i></i><span>Core &amp; Pulse</span><i></i>
+        <span>Train for longevity</span><i></i><span>Nueva colección 02 · Longevity</span><i></i><span>Cruzfit Active Wear</span><i></i><span>Core &amp; Pulse</span><i></i>
+      </div>
+    </div>
 
     <!-- ========== STATEMENT (B&W) ========== -->
     <section class="statement">
@@ -125,13 +132,26 @@
                 <p id="bentoBText">Línea Core: compresión negra con vivos lima.</p>
               </div>
               <button class="mini-card" id="miniCard" data-open="short-core">
-                <img src="assets/img/shorts-detail.jpg" alt="" />
-                <span class="mini-title" id="miniTitle">Descubre<br/>el short Core</span>
+                <span class="mini-art"></span>
+                <span class="mini-title" id="miniTitle"></span>
                 <span class="mini-btn">Ver producto</span>
               </button>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ========== NUEVA COLECCIÓN ========== -->
+    <section class="launch" id="nueva">
+      <div class="wrap">
+        <div class="launch-head">
+          <p class="eyebrow">Nuevo · Colección 02</p>
+          <h2 class="launch-title">Longevity</h2>
+          <p class="lead">Cuatro piezas nuevas y dos sets en tonos tierra: crop de manga larga, bike short, tank y jogger. Hechas para entrenar todos los días, por muchos años.</p>
+          <a class="pill pill--light" href="#catalogo">Ver la colección</a>
+        </div>
+        <div class="showcase" id="showcase"></div>
       </div>
     </section>
 
@@ -141,7 +161,7 @@
         <div class="section-head section-head--row">
           <div>
             <p class="eyebrow">Catálogo</p>
-            <h2 class="display display--md">Colección 01</h2>
+            <h2 class="display display--md">Todas las piezas</h2>
           </div>
           <div class="filters" role="tablist" aria-label="Filtrar productos">
             <button class="is-on" data-filter="todo">Todo</button>
@@ -152,7 +172,14 @@
             <button data-filter="sets">Sets</button>
           </div>
         </div>
-        <div class="grid" id="productGrid"></div>
+        <div class="col-block">
+          <div class="col-head"><h3>Colección 02 · Longevity</h3><span>Nuevo</span></div>
+          <div class="grid" id="gridNew"></div>
+        </div>
+        <div class="col-block">
+          <div class="col-head"><h3>Colección 01 · Core &amp; Pulse</h3><span>5 colores por pieza</span></div>
+          <div class="grid" id="gridOne"></div>
+        </div>
       </div>
     </section>
 
@@ -237,7 +264,6 @@
         <div class="pd-block">
           <p class="olabel">Color · <span id="pmColorName"></span></p>
           <div class="swatches" id="pmSwatches"></div>
-          <p class="pd-soon" id="pmSoonWrap"><span>Próximamente</span> <span class="soon-dots" id="pmSoon"></span></p>
         </div>
 
         <div class="pd-block">
@@ -265,6 +291,7 @@
     </section>
   </div>
 
+  <script src="garments.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

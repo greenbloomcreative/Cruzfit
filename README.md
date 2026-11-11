@@ -12,7 +12,7 @@ python3 -m http.server 8000   # http://localhost:8000
 - `app.js` — datos del catálogo (`PRODUCTS`), filtros y galería 3D de producto.
 - `assets/brand/` — logo vectorizado desde el PDF de marca (icono, wordmark y lockup).
 - `assets/img/` — fotos del lookbook con cielo (portadas y categorías) + recortes en B&W.
-- `assets/img/studio/` — las mismas fotos recortadas sobre fondo de estudio, para catálogo y fichas.
+- `garments.js` — renders de producto (SVG) de cada prenda, en cualquier color: frente, espalda y detalle.
 
 ## Añadir productos o colores
-Editar el arreglo `PRODUCTS` en `app.js`. Cada color tiene `name`, `hex`, `accent` opcional y su propia lista de `views` (fotos en `assets/img/studio/`). Los colores sin foto van en `soon` y se muestran como "Próximamente". Las portadas del bento por categoría están en `BENTO`.
+Editar `PRODUCTS` y `PALETTE` en `app.js`. Cada producto indica su prenda (`render`) o sus dos prendas (`set`) y una paleta de colores (`base` + `accent`). Las portadas del bento por categoría están en `BENTO` y usan las fotos reales de los modelos.
