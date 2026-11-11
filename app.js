@@ -232,7 +232,7 @@ function openProduct(id) {
   document.body.classList.add("is-locked");
   renderInfo();
   requestAnimationFrame(buildRing);
-  history.replaceState(null, "", "#p/" + id);
+  history.replaceState(null, "", "#producto-" + id);
   $(".pmodal-close").focus({ preventScroll: true });
 }
 
@@ -340,7 +340,7 @@ function init() {
     rt = setTimeout(() => { layoutHero(); if (!$("#pmodal").hidden) buildRing(); }, 150);
   });
 
-  const m = location.hash.match(/^#p\/(.+)$/);
+  const m = location.hash.match(/^#producto-(.+)$/);
   if (m) openProduct(m[1]);
 }
 
