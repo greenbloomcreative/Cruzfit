@@ -46,10 +46,11 @@ const PRODUCTS = [
     cats: ["hombre", "tops"],
     desc: "Camiseta de compresión manga corta con mapeo de texturas y vivos de contraste en hombros. Ajuste segunda piel para entrenar sin roces.",
     colors: [
-      { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "duo.jpg"] },
-      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["men-front--rosa.jpg", "tee-detail--rosa.jpg", "duo--rosa.jpg"] },
-      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["men-front--blanco.jpg", "tee-detail--blanco.jpg", "duo--blanco.jpg"] },
-      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["men-front--naranja.jpg", "tee-detail--naranja.jpg", "duo--naranja.jpg"] },
+      { name: "Negro / Lima", hex: "#111111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "duo.jpg"] },
+      { name: "Marino / Naranja", hex: "#1c2a4a", accent: "#f07a2a", views: ["men-front--marino.jpg", "tee-detail--marino.jpg", "duo--marino.jpg"] },
+      { name: "Oliva / Hueso", hex: "#4c5a26", accent: "#ece6d8", views: ["men-front--oliva.jpg", "tee-detail--oliva.jpg", "duo--oliva.jpg"] },
+      { name: "Grafito / Rosa", hex: "#a9adb2", accent: "#f0468f", views: ["men-front--grafito.jpg", "tee-detail--grafito.jpg", "duo--grafito.jpg"] },
+      { name: "Arena / Negro", hex: "#d8c7a4", accent: "#111111", views: ["men-front--arena.jpg", "tee-detail--arena.jpg", "duo--arena.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     specs: ["Ajuste de compresión", "Textura mapeada en torso", "Vivos de contraste", "Secado rápido"],
@@ -59,12 +60,13 @@ const PRODUCTS = [
     name: "Short de Entrenamiento Core",
     line: "Línea Core · Hombre",
     cats: ["hombre", "bottoms"],
-    desc: "Short ligero de 7\" con cordón interior y franjas curvas en color de contraste. Tela ripstop que se mueve contigo en cada zancada.",
+    desc: "Short ligero de 7\" con cordón interior y franjas curvas en color de contraste. Disponible en cinco combinaciones de tela y vivos. Tela ripstop que se mueve contigo en cada zancada.",
     colors: [
-      { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["shorts-detail.jpg", "men-front.jpg", "tee-detail.jpg"] },
-      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["shorts-detail--rosa.jpg", "men-front--rosa.jpg", "tee-detail--rosa.jpg"] },
-      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["shorts-detail--blanco.jpg", "men-front--blanco.jpg", "tee-detail--blanco.jpg"] },
-      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["shorts-detail--naranja.jpg", "men-front--naranja.jpg", "tee-detail--naranja.jpg"] },
+      { name: "Negro / Lima", hex: "#111111", accent: "#d3f36b", views: ["shorts-detail.jpg", "men-front.jpg", "tee-detail.jpg"] },
+      { name: "Marino / Naranja", hex: "#1c2a4a", accent: "#f07a2a", views: ["shorts-detail--marino.jpg", "men-front--marino.jpg", "tee-detail--marino.jpg"] },
+      { name: "Oliva / Hueso", hex: "#4c5a26", accent: "#ece6d8", views: ["shorts-detail--oliva.jpg", "men-front--oliva.jpg", "tee-detail--oliva.jpg"] },
+      { name: "Grafito / Rosa", hex: "#a9adb2", accent: "#f0468f", views: ["shorts-detail--grafito.jpg", "men-front--grafito.jpg", "tee-detail--grafito.jpg"] },
+      { name: "Arena / Negro", hex: "#d8c7a4", accent: "#111111", views: ["shorts-detail--arena.jpg", "men-front--arena.jpg", "tee-detail--arena.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     specs: ["Largo 7\"", "Cintura elástica con cordón", "Tejido ripstop ligero", "Logo Cruzfit bordado"],
@@ -90,15 +92,46 @@ const PRODUCTS = [
     name: "Set Core",
     line: "Set · Hombre",
     cats: ["hombre", "sets"],
-    desc: "Camiseta Compresión Core + Short de Entrenamiento Core. Base negra con acentos en cuatro colores para el día de pierna y para todos los demás.",
+    desc: "Camiseta Compresión Core + Short de Entrenamiento Core. Cinco combinaciones de color, de negro total a arena para el día de pierna y para todos los demás.",
     colors: [
-      { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "shorts-detail.jpg", "duo.jpg"] },
-      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["men-front--rosa.jpg", "tee-detail--rosa.jpg", "shorts-detail--rosa.jpg", "duo--rosa.jpg"] },
-      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["men-front--blanco.jpg", "tee-detail--blanco.jpg", "shorts-detail--blanco.jpg", "duo--blanco.jpg"] },
-      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["men-front--naranja.jpg", "tee-detail--naranja.jpg", "shorts-detail--naranja.jpg", "duo--naranja.jpg"] },
+      { name: "Negro / Lima", hex: "#111111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "shorts-detail.jpg", "duo.jpg"] },
+      { name: "Marino / Naranja", hex: "#1c2a4a", accent: "#f07a2a", views: ["men-front--marino.jpg", "tee-detail--marino.jpg", "shorts-detail--marino.jpg", "duo--marino.jpg"] },
+      { name: "Oliva / Hueso", hex: "#4c5a26", accent: "#ece6d8", views: ["men-front--oliva.jpg", "tee-detail--oliva.jpg", "shorts-detail--oliva.jpg", "duo--oliva.jpg"] },
+      { name: "Grafito / Rosa", hex: "#a9adb2", accent: "#f0468f", views: ["men-front--grafito.jpg", "tee-detail--grafito.jpg", "shorts-detail--grafito.jpg", "duo--grafito.jpg"] },
+      { name: "Arena / Negro", hex: "#d8c7a4", accent: "#111111", views: ["men-front--arena.jpg", "tee-detail--arena.jpg", "shorts-detail--arena.jpg", "duo--arena.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     specs: ["Incluye camiseta + short", "Tallas independientes", "Acentos coordinados"],
+  },
+  {
+    id: "set-pulse-contraste",
+    name: "Set Pulse Contraste",
+    line: "Set · Mujer",
+    badge: "Nuevo · Estudio",
+    cats: ["mujer", "sets"],
+    desc: "El set Pulse en dos tonos: top y leggings en colores distintos para un look de contraste. Mismo tejido de compresión, mismo tiro alto.",
+    colors: [
+      { name: "Onyx / Salvia", hex: "#2b2b2b", accent: "#8fcca0", views: ["women-front--onyx-salvia.jpg", "women-stretch--onyx-salvia.jpg", "leggings-detail--onyx-salvia.jpg"] },
+      { name: "Lila / Onyx", hex: "#a77df0", accent: "#2b2b2b", views: ["women-front--lila-onyx.jpg", "women-stretch--lila-onyx.jpg", "leggings-detail--lila-onyx.jpg"] },
+      { name: "Hueso / Cobalto", hex: "#efeae0", accent: "#2f5be0", views: ["women-front--hueso-cobalto.jpg", "women-stretch--hueso-cobalto.jpg", "leggings-detail--hueso-cobalto.jpg"] },
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    specs: ["Top y leggings en tonos combinados", "Tallas independientes", "Compresión estructurada", "Edición estudio"],
+  },
+  {
+    id: "set-core-tonal",
+    name: "Set Core Tonal",
+    line: "Set · Hombre",
+    badge: "Nuevo · Estudio",
+    cats: ["hombre", "sets"],
+    desc: "Camiseta de compresión y short Core en tonos distintos. Una paleta tierra y neutra para entrenar y salir del gimnasio con la misma ropa.",
+    colors: [
+      { name: "Arena / Oliva", hex: "#d8c7a4", accent: "#4c5a26", views: ["men-front--arena-oliva.jpg", "tee-detail--arena-oliva.jpg", "shorts-detail--arena-oliva.jpg"] },
+      { name: "Hueso / Negro", hex: "#efeae0", accent: "#111111", views: ["men-front--hueso-negro.jpg", "tee-detail--hueso-negro.jpg", "shorts-detail--hueso-negro.jpg"] },
+      { name: "Grafito / Marino", hex: "#a9adb2", accent: "#1c2a4a", views: ["men-front--grafito-marino.jpg", "tee-detail--grafito-marino.jpg", "shorts-detail--grafito-marino.jpg"] },
+    ],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    specs: ["Camiseta y short en tonos combinados", "Tallas independientes", "Vivos de contraste", "Edición estudio"],
   },
 ];
 
@@ -111,6 +144,7 @@ const VIEW_LABELS = {
   "shorts-detail.jpg": "Detalle",
   "duo.jpg": "Colección",
 };
+const viewLabel = (f) => VIEW_LABELS[f.replace(/--[\w-]+\.jpg$/, ".jpg")] || "Vista";
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -124,7 +158,7 @@ function renderGrid() {
     return `
       <button class="card" data-id="${p.id}" data-cats="${p.cats.join(" ")}" aria-label="Ver ${p.name}">
         <div class="card-media">
-          <span class="card-badge">${p.cats.includes("sets") ? "Set" : p.line.split("·")[0].trim()}</span>
+          <span class="card-badge${p.badge ? " card-badge--new" : ""}">${p.badge || (p.cats.includes("sets") ? "Set" : p.line.split("·")[0].trim())}</span>
           <img class="img-a" src="${IMG + v[0]}" alt="${p.name}" loading="lazy" />
           <img class="img-b" src="${IMG + (v[1] || v[0])}" alt="" loading="lazy" />
         </div>
@@ -157,7 +191,9 @@ function previewDot(dot) {
 function renderColorways() {
   const rows = [
     { id: "set-pulse", view: 1, label: "Línea Pulse", note: "Top + leggings · 5 tonos" },
-    { id: "short-core", view: 0, label: "Línea Core", note: "Short + camiseta · 4 acentos" },
+    { id: "set-core", view: 0, label: "Línea Core", note: "Camiseta + short · 5 combinaciones" },
+    { id: "set-pulse-contraste", view: 0, label: "Nuevo · Pulse Contraste", note: "Dos tonos · fondo estudio" },
+    { id: "set-core-tonal", view: 0, label: "Nuevo · Core Tonal", note: "Dos tonos · fondo estudio" },
   ];
   $("#colorways").innerHTML = rows.map((r) => {
     const p = PRODUCTS.find((x) => x.id === r.id);
@@ -229,9 +265,9 @@ function buildRing() {
     }
     return `
       <article class="panel3d" style="transform: rotateY(${rot}deg) translateZ(${radius}px)">
-        <h4>${VIEW_LABELS[pn.img] || "Vista"}</h4>
+        <h4>${viewLabel(pn.img)}</h4>
         <div class="pcols"><p>${p.name.toUpperCase()}</p><p>${c.name} · Tallas ${p.sizes[0]}–${p.sizes.at(-1)}</p></div>
-        <div class="pimg"><img src="${IMG + pn.img}" alt="${p.name} — ${VIEW_LABELS[pn.img] || "vista"}" /></div>
+        <div class="pimg"><img src="${IMG + pn.img}" alt="${p.name} — ${viewLabel(pn.img).toLowerCase()}" /></div>
         <span class="pnum">${num}</span>
       </article>`;
   }).join("");
@@ -267,7 +303,7 @@ function renderInfo() {
   $("#pmSizes").innerHTML = p.sizes.map((s) =>
     `<button class="size ${s === state.size ? "is-on" : ""}" data-size="${s}">${s}</button>`).join("");
   $("#pmThumbs").innerHTML = c.views.map((v, i) =>
-    `<button class="thumb" data-view="${i + 1}" aria-label="${VIEW_LABELS[v] || "Vista"}"><img src="${IMG + v}" alt="" /></button>`).join("");
+    `<button class="thumb" data-view="${i + 1}" aria-label="${viewLabel(v)}"><img src="${IMG + v}" alt="" /></button>`).join("");
   $("#pmSpecs").innerHTML = p.specs.map((s) => `<li>${s}</li>`).join("");
   updateCta();
 }

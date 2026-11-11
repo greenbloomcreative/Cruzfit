@@ -377,10 +377,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: rgba(0,0,0,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   padding: 6px 10px; border-radius: 999px;
 }
+.card-badge--new { background: var(--lime); color: #000; backdrop-filter: none; }
 .card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; }
-.card-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.card-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 12px; }
 .card h3 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
-.card .meta { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.card .meta { white-space: nowrap; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .card-dots { display: flex; gap: 6px; }
 .dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); display: inline-block; flex-shrink: 0; }
 .card-dots .dot { width: 16px; height: 16px; cursor: pointer; transition: transform .15s; }
@@ -388,6 +389,22 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .card-go { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
 .card-go::after { content: "→"; transition: transform .25s; }
 .card:hover .card-go::after { transform: translateX(4px); }
+
+/* =========================================================
+   FRANCISCO — editorial B&W
+   ========================================================= */
+.athlete { padding: clamp(80px, 11vw, 150px) 0; background: var(--ink); overflow: hidden; }
+.athlete-inner { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.athlete-copy { min-width: 0; }
+.athlete-copy .display { text-wrap: balance; max-width: 14ch; }
+.athlete-photos { position: relative; margin: 0; min-height: clamp(380px, 46vw, 620px); }
+.athlete-photos .ph {
+  position: absolute; object-fit: cover; border-radius: 4px;
+  filter: grayscale(1) contrast(1.12);
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,.8);
+}
+.athlete-photos .ph--a { left: 0; top: 0; width: 62%; height: 82%; }
+.athlete-photos .ph--b { right: 0; bottom: 0; width: 48%; height: 62%; border: 6px solid var(--ink); }
 
 /* =========================================================
    MARCA — B&W
@@ -520,6 +537,9 @@ body.is-locked { overflow: hidden; }
 /* =========================================================
    RESPONSIVE
    ========================================================= */
+@media (min-width: 1200px) {
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 @media (max-width: 1024px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pmodal-panel { grid-template-columns: 1fr; grid-template-rows: 52% 1fr; }
@@ -527,6 +547,8 @@ body.is-locked { overflow: hidden; }
 }
 @media (max-width: 860px) {
   .main-nav { display: none; }
+  .athlete-inner { grid-template-columns: 1fr; }
+  .athlete-photos { min-height: 0; aspect-ratio: 1 / 1.05; max-width: 100%; }
   .cw-strip { grid-auto-columns: 42%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
   .cw-strip::-webkit-scrollbar { display: none; }
   .cw-item { scroll-snap-align: start; }
