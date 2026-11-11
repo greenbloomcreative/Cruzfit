@@ -296,7 +296,28 @@ ${inner(top, 20, 20, 620)}
 </svg>`;
   }
 
+  /* todos los colores de una prenda en una misma toma */
+  function lineupSVG(type, list, opts = {}) {
+    const scene = opts.scene || ["#f1efeb", "#dedbd5"];
+    const id = "l" + (++uid);
+    const cols = list.length <= 4 ? 2 : 3;
+    const rows = Math.ceil(list.length / cols);
+    const cw = W / cols, ch = Math.min(cw * 1.25, H / rows);
+    const top = (H - ch * rows) / 2;
+    const cells = list.map((c, i) => {
+      const r = Math.floor(i / cols), k = i % cols;
+      const inRow = Math.min(cols, list.length - r * cols);
+      const x = (W - inRow * cw) / 2 + k * cw;
+      return garmentSVG(type, c, "front", { noBg: true })
+        .replace("<svg ", `<svg x="${x}" y="${top + r * ch}" width="${cw}" height="${ch}" `);
+    }).join("");
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" class="gsvg" role="img" aria-label="${opts.label || "colores"}">
+<defs><radialGradient id="bg${id}" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="${scene[0]}"/><stop offset="1" stop-color="${scene[1]}"/></radialGradient></defs>
+<rect width="${W}" height="${H}" fill="url(#bg${id})"/>${cells}</svg>`;
+  }
+
   window.garmentSVG = garmentSVG;
+  window.lineupSVG = lineupSVG;
   window.setSVG = setSVG;
   window.GARMENT_TYPES = Object.keys(G);
 })();

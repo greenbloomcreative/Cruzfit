@@ -85,12 +85,13 @@ function viewsOf(p) {
     { key: "set", label: "Set completo" },
     { key: "top", label: "Parte de arriba" },
     { key: "bottom", label: "Parte de abajo" },
-    { key: "back", label: "Espalda" },
+    { key: "colors", label: "Todos los colores" },
   ];
   return [
     { key: "front", label: "Frente" },
     { key: "back", label: "Espalda" },
     { key: "detail", label: "Detalle" },
+    { key: "colors", label: "Todos los colores" },
   ];
 }
 
@@ -98,6 +99,9 @@ function renderView(p, colorIdx, key) {
   const c = p.colors[colorIdx];
   const col = { base: c.base, accent: c.accent };
   const label = `${p.name} — ${c.name}`;
+  if (key === "colors") {
+    return lineupSVG(p.set ? p.set[0] : p.render, p.colors.map((x) => ({ base: x.base, accent: x.accent })), { label: `${p.name} — todos los colores` });
+  }
   if (p.set) {
     if (key === "set") return setSVG([p.set[0], col], [p.set[1], col], "front", { label });
     if (key === "top") return garmentSVG(p.set[0], col, "front", { label });
