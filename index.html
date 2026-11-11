@@ -21,7 +21,6 @@
     </a>
     <nav class="main-nav" aria-label="Principal">
       <a href="#categorias">Categorías</a>
-      <a href="#colores">Colores</a>
       <a href="#catalogo" data-filter-link="mujer">Mujer</a>
       <a href="#catalogo" data-filter-link="hombre">Hombre</a>
       <a href="#marca">Marca</a>
@@ -32,6 +31,7 @@
   <main>
     <!-- ========== HERO: TIPOGRAFÍA + ROSTRO (FRANCISCO) ========== -->
     <section class="hero" aria-label="Train for longevity">
+      <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-poster">
         <h1 class="hero-type" aria-label="Train for longevity">
           <span class="l l1">TRAIN</span>
@@ -90,63 +90,48 @@
             <a class="bento-cta" href="#catalogo"><span class="plus">+</span> Ver todo</a>
           </div>
 
-          <div class="bento-grid">
-            <a class="tile tile--women" href="#catalogo" data-cat-go="mujer">
-              <img src="assets/img/women-stretch.jpg" alt="Modelo con top y leggings Pulse en rosa" loading="lazy" />
+          <div class="bento-grid" id="bentoGrid">
+            <div class="tile tile--a" data-bento="a" role="button" tabindex="0">
+              <img src="assets/img/women-stretch.jpg" alt="" />
               <div class="tile-text">
-                <h3>Mujer</h3>
-                <p>Línea Pulse: tops y leggings de tiro alto con soporte y compresión.</p>
+                <h3 id="bentoATitle">Mujer</h3>
+                <p id="bentoAText">Línea Pulse: tops y leggings de tiro alto con soporte y compresión.</p>
               </div>
               <span class="round-arrow" aria-hidden="true">↗</span>
-            </a>
+            </div>
 
             <div class="tile tile--stat">
               <strong id="statCount">06</strong>
-              <span>piezas</span>
+              <span id="statLabel">piezas</span>
             </div>
-            <a class="tile tile--chip" href="#catalogo" data-cat-go="sets">
+            <button class="tile tile--chip" data-cat="sets">
               <span class="chip-icon" aria-hidden="true"></span>
               <span>sets</span>
-            </a>
+            </button>
 
             <div class="tile tile--cream">
-              <div class="cream-top"><span>Recomendado</span><span aria-hidden="true">•••</span></div>
-              <h3>El set Pulse: rosa intenso, costuras de compresión y un tiro alto que no se baja en ninguna sentadilla.</h3>
-              <p>Top de soporte medio con panel de malla y leggings sin costuras laterales. Diseñados para moverse juntos, de la primera a la última repetición.</p>
-              <button class="pill pill--outline pill--xs" data-open="set-pulse">Ver set</button>
-              <span class="round-arrow round-arrow--dark" aria-hidden="true">↗</span>
-              <div class="cream-foot"><span>Guía de tallas</span><a href="#catalogo">Siguiente</a></div>
+              <div class="cream-top"><span id="creamEyebrow">Recomendado</span><span aria-hidden="true">•••</span></div>
+              <h3 id="creamTitle"></h3>
+              <p id="creamText"></p>
+              <button class="pill pill--outline pill--xs" id="creamBtn" data-open="set-pulse">Ver producto</button>
+              <div class="cream-foot"><span>Guía de tallas</span><a href="#catalogo">Ver catálogo</a></div>
             </div>
 
-            <a class="tile tile--men" href="#catalogo" data-cat-go="hombre">
-              <img src="assets/img/men-front.jpg" alt="Francisco con camiseta de compresión y short Core" loading="lazy" />
-              <span class="add-pill">Hombre <span class="plus">+</span></span>
+            <div class="tile tile--b" data-bento="b" role="button" tabindex="0">
+              <img src="assets/img/men-front.jpg" alt="" />
+              <span class="add-pill"><span id="bentoBPill">Hombre</span> <span class="plus">+</span></span>
               <div class="tile-text tile-text--bottom">
-                <h3>Hombre</h3>
-                <p>Línea Core: cinco combinaciones de tela y vivos.</p>
+                <h3 id="bentoBTitle">Hombre</h3>
+                <p id="bentoBText">Línea Core: compresión negra con vivos lima.</p>
               </div>
-              <div class="mini-card" data-open="short-core" role="button" tabindex="0">
-                <img src="assets/img/shorts-detail.jpg" alt="" loading="lazy" />
-                <p>Descubre<br/>el short Core</p>
+              <button class="mini-card" id="miniCard" data-open="short-core">
+                <img src="assets/img/shorts-detail.jpg" alt="" />
+                <span class="mini-title" id="miniTitle">Descubre<br/>el short Core</span>
                 <span class="mini-btn">Ver producto</span>
-              </div>
-            </a>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ========== NUEVOS COLORES ========== -->
-    <section class="cw-section" id="colores">
-      <div class="wrap">
-        <div class="section-head section-head--row">
-          <div>
-            <p class="eyebrow">Nuevos colores</p>
-            <h2 class="display display--md">Misma colección.<br/>Nuevos colores y sets.</h2>
-          </div>
-          <p class="cw-intro">Pulse llega en cinco tonos y Core en cinco combinaciones de tela y vivos. Además, dos sets nuevos en dos tonos, fotografiados en estudio. Toca un color para verlo en detalle.</p>
-        </div>
-        <div id="colorways"></div>
       </div>
     </section>
 
@@ -224,39 +209,60 @@
     </div>
   </footer>
 
-  <!-- ========== MODAL DE PRODUCTO (GALERÍA 3D) ========== -->
-  <div class="pmodal" id="pmodal" hidden>
-    <div class="pmodal-backdrop" data-close></div>
-    <div class="pmodal-panel" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
-      <button class="pmodal-close" data-close aria-label="Cerrar">✕</button>
-      <div class="stage" id="stage">
-        <div class="ring" id="ring"></div>
-        <div class="stage-ctrl">
-          <button id="prevCard" aria-label="Vista anterior">←</button>
-          <span id="stageCount">01 / 04</span>
-          <button id="nextCard" aria-label="Vista siguiente">→</button>
-        </div>
+  <!-- ========== FICHA DE PRODUCTO (SLIDER 3D + GALERÍA ESTILO NIKE) ========== -->
+  <div class="pd" id="pmodal" hidden tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <div class="pd-bar">
+      <button class="pd-back" data-close>← Catálogo</button>
+      <span class="pd-bar-title" id="pmBarTitle"></span>
+      <button class="pd-x" data-close aria-label="Cerrar">✕</button>
+    </div>
+
+    <section class="stage" id="stage" aria-label="Vistas del producto en 3D">
+      <div class="ring" id="ring"></div>
+      <div class="stage-ctrl">
+        <button id="prevCard" aria-label="Vista anterior">←</button>
+        <span id="stageCount">01 / 04</span>
+        <button id="nextCard" aria-label="Vista siguiente">→</button>
       </div>
-      <div class="pinfo">
-        <p class="eyebrow" id="pmLine">Línea</p>
-        <h2 id="pmTitle">Producto</h2>
-        <p class="pdesc" id="pmDesc"></p>
-        <div class="popt">
+      <p class="stage-hint">Arrastra para girar</p>
+    </section>
+
+    <section class="pd-main">
+      <div class="pd-gallery" id="pmGallery"></div>
+      <aside class="pd-info">
+        <p class="pd-line" id="pmLine"></p>
+        <h2 id="pmTitle"></h2>
+        <p class="pd-price">Precio a consultar</p>
+
+        <div class="pd-block">
           <p class="olabel">Color · <span id="pmColorName"></span></p>
           <div class="swatches" id="pmSwatches"></div>
+          <p class="pd-soon" id="pmSoonWrap"><span>Próximamente</span> <span class="soon-dots" id="pmSoon"></span></p>
         </div>
-        <div class="popt">
-          <p class="olabel">Talla</p>
+
+        <div class="pd-block">
+          <div class="olabel-row"><p class="olabel">Selecciona tu talla</p><a href="#contacto" class="pd-guide">Guía de tallas</a></div>
           <div class="sizes" id="pmSizes"></div>
         </div>
-        <div class="popt">
-          <p class="olabel">Vistas</p>
-          <div class="thumbs" id="pmThumbs"></div>
-        </div>
-        <ul class="pspecs" id="pmSpecs"></ul>
-        <a class="pill pill--light pill--block" id="pmCta" href="#contacto">Consultar disponibilidad</a>
-      </div>
-    </div>
+
+        <a class="pd-cta" id="pmCta" href="#contacto">Consultar disponibilidad</a>
+
+        <p class="pd-desc" id="pmDesc"></p>
+
+        <details class="pd-acc" open>
+          <summary>Características</summary>
+          <ul class="pspecs" id="pmSpecs"></ul>
+        </details>
+        <details class="pd-acc">
+          <summary>Tallas y ajuste</summary>
+          <p>Ajuste de compresión. Si estás entre dos tallas y prefieres más holgura, elige la mayor.</p>
+        </details>
+        <details class="pd-acc">
+          <summary>Cuidados</summary>
+          <p>Lavar en frío con colores similares. No usar secadora ni suavizante para conservar la compresión.</p>
+        </details>
+      </aside>
+    </section>
   </div>
 
   <script src="app.js"></script>
