@@ -15,6 +15,10 @@ const PRODUCTS = [
     desc: "Top de soporte medio con escote en V de malla y banda inferior ancha. Se queda en su lugar en saltos, sprints y estiramientos.",
     colors: [
       { name: "Rosa Pulse", hex: "#f0468f", views: ["women-front.jpg", "women-stretch.jpg", "duo.jpg"] },
+      { name: "Negro Onyx", hex: "#2b2b2b", views: ["women-front--negro.jpg", "women-stretch--negro.jpg", "duo--negro.jpg"] },
+      { name: "Lila", hex: "#a77df0", views: ["women-front--lila.jpg", "women-stretch--lila.jpg", "duo--lila.jpg"] },
+      { name: "Salvia", hex: "#8fcca0", views: ["women-front--salvia.jpg", "women-stretch--salvia.jpg", "duo--salvia.jpg"] },
+      { name: "Cobalto", hex: "#2f5be0", views: ["women-front--cobalto.jpg", "women-stretch--cobalto.jpg", "duo--cobalto.jpg"] },
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     specs: ["Soporte medio", "Panel de malla transpirable", "Copas removibles", "Banda elástica de 4 cm"],
@@ -27,6 +31,10 @@ const PRODUCTS = [
     desc: "Leggings sin costuras laterales con cintura alta y líneas de compresión que estilizan y sostienen. Opacos en sentadilla profunda.",
     colors: [
       { name: "Rosa Pulse", hex: "#f0468f", views: ["leggings-detail.jpg", "women-front.jpg", "women-stretch.jpg"] },
+      { name: "Negro Onyx", hex: "#2b2b2b", views: ["leggings-detail--negro.jpg", "women-front--negro.jpg", "women-stretch--negro.jpg"] },
+      { name: "Lila", hex: "#a77df0", views: ["leggings-detail--lila.jpg", "women-front--lila.jpg", "women-stretch--lila.jpg"] },
+      { name: "Salvia", hex: "#8fcca0", views: ["leggings-detail--salvia.jpg", "women-front--salvia.jpg", "women-stretch--salvia.jpg"] },
+      { name: "Cobalto", hex: "#2f5be0", views: ["leggings-detail--cobalto.jpg", "women-front--cobalto.jpg", "women-stretch--cobalto.jpg"] },
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     specs: ["Cintura alta", "Compresión estructurada", "Malla posterior en rodilla", "Prueba de sentadilla"],
@@ -36,21 +44,27 @@ const PRODUCTS = [
     name: "Camiseta Compresión Core",
     line: "Línea Core · Hombre",
     cats: ["hombre", "tops"],
-    desc: "Camiseta de compresión manga corta con mapeo de texturas y vivos lima en hombros. Ajuste segunda piel para entrenar sin roces.",
+    desc: "Camiseta de compresión manga corta con mapeo de texturas y vivos de contraste en hombros. Ajuste segunda piel para entrenar sin roces.",
     colors: [
       { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "duo.jpg"] },
+      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["men-front--rosa.jpg", "tee-detail--rosa.jpg", "duo--rosa.jpg"] },
+      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["men-front--blanco.jpg", "tee-detail--blanco.jpg", "duo--blanco.jpg"] },
+      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["men-front--naranja.jpg", "tee-detail--naranja.jpg", "duo--naranja.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
-    specs: ["Ajuste de compresión", "Textura mapeada en torso", "Vivos lima reflectivos", "Secado rápido"],
+    specs: ["Ajuste de compresión", "Textura mapeada en torso", "Vivos de contraste", "Secado rápido"],
   },
   {
     id: "short-core",
     name: "Short de Entrenamiento Core",
     line: "Línea Core · Hombre",
     cats: ["hombre", "bottoms"],
-    desc: "Short ligero de 7\" con cordón interior y franjas curvas lima. Tela ripstop que se mueve contigo en cada zancada.",
+    desc: "Short ligero de 7\" con cordón interior y franjas curvas en color de contraste. Tela ripstop que se mueve contigo en cada zancada.",
     colors: [
       { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["shorts-detail.jpg", "men-front.jpg", "tee-detail.jpg"] },
+      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["shorts-detail--rosa.jpg", "men-front--rosa.jpg", "tee-detail--rosa.jpg"] },
+      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["shorts-detail--blanco.jpg", "men-front--blanco.jpg", "tee-detail--blanco.jpg"] },
+      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["shorts-detail--naranja.jpg", "men-front--naranja.jpg", "tee-detail--naranja.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     specs: ["Largo 7\"", "Cintura elástica con cordón", "Tejido ripstop ligero", "Logo Cruzfit bordado"],
@@ -60,9 +74,13 @@ const PRODUCTS = [
     name: "Set Pulse",
     line: "Set · Mujer",
     cats: ["mujer", "sets"],
-    desc: "Top Deportivo Pulse + Leggings Pulse Tiro Alto. El conjunto completo en rosa intenso, pensado para moverse como una sola pieza.",
+    desc: "Top Deportivo Pulse + Leggings Pulse Tiro Alto. El conjunto completo en cinco tonos, pensado para moverse como una sola pieza.",
     colors: [
       { name: "Rosa Pulse", hex: "#f0468f", views: ["women-stretch.jpg", "women-front.jpg", "leggings-detail.jpg", "duo.jpg"] },
+      { name: "Negro Onyx", hex: "#2b2b2b", views: ["women-stretch--negro.jpg", "women-front--negro.jpg", "leggings-detail--negro.jpg", "duo--negro.jpg"] },
+      { name: "Lila", hex: "#a77df0", views: ["women-stretch--lila.jpg", "women-front--lila.jpg", "leggings-detail--lila.jpg", "duo--lila.jpg"] },
+      { name: "Salvia", hex: "#8fcca0", views: ["women-stretch--salvia.jpg", "women-front--salvia.jpg", "leggings-detail--salvia.jpg", "duo--salvia.jpg"] },
+      { name: "Cobalto", hex: "#2f5be0", views: ["women-stretch--cobalto.jpg", "women-front--cobalto.jpg", "leggings-detail--cobalto.jpg", "duo--cobalto.jpg"] },
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     specs: ["Incluye top + leggings", "Tallas independientes", "Compresión coordinada"],
@@ -72,12 +90,15 @@ const PRODUCTS = [
     name: "Set Core",
     line: "Set · Hombre",
     cats: ["hombre", "sets"],
-    desc: "Camiseta Compresión Core + Short de Entrenamiento Core. Negro total con acentos lima para el día de pierna y para todos los demás.",
+    desc: "Camiseta Compresión Core + Short de Entrenamiento Core. Base negra con acentos en cuatro colores para el día de pierna y para todos los demás.",
     colors: [
       { name: "Negro / Lima", hex: "#111", accent: "#d3f36b", views: ["men-front.jpg", "tee-detail.jpg", "shorts-detail.jpg", "duo.jpg"] },
+      { name: "Negro / Rosa", hex: "#111", accent: "#f0468f", views: ["men-front--rosa.jpg", "tee-detail--rosa.jpg", "shorts-detail--rosa.jpg", "duo--rosa.jpg"] },
+      { name: "Negro / Blanco", hex: "#111", accent: "#f1f1f1", views: ["men-front--blanco.jpg", "tee-detail--blanco.jpg", "shorts-detail--blanco.jpg", "duo--blanco.jpg"] },
+      { name: "Negro / Naranja", hex: "#111", accent: "#f07a2a", views: ["men-front--naranja.jpg", "tee-detail--naranja.jpg", "shorts-detail--naranja.jpg", "duo--naranja.jpg"] },
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
-    specs: ["Incluye camiseta + short", "Tallas independientes", "Detalles lima coordinados"],
+    specs: ["Incluye camiseta + short", "Tallas independientes", "Acentos coordinados"],
   },
 ];
 
@@ -110,14 +131,48 @@ function renderGrid() {
         <div class="card-body">
           <div class="card-row"><h3>${p.name}</h3></div>
           <div class="card-row">
-            <span class="meta">${p.line.split("·")[1].trim()} · ${p.sizes[0]}–${p.sizes.at(-1)}</span>
-            <span class="card-dots">${p.colors.map((c) => `<i class="dot" style="background:${swatchBg(c)}"></i>`).join("")}</span>
+            <span class="meta">${p.colors.length} colores · ${p.sizes[0]}–${p.sizes.at(-1)}</span>
+            <span class="card-dots">${p.colors.map((c, i) => `<i class="dot${i === 0 ? " is-on" : ""}" data-c="${i}" title="${c.name}" style="background:${swatchBg(c)}"></i>`).join("")}</span>
           </div>
           <span class="card-go">Ver producto</span>
         </div>
       </button>`;
   }).join("");
   $("#statCount").textContent = String(PRODUCTS.length).padStart(2, "0");
+  renderColorways();
+}
+
+/* Al pasar por un punto de color, la tarjeta muestra ese colorway */
+function previewDot(dot) {
+  const card = dot.closest(".card");
+  const p = PRODUCTS.find((x) => x.id === card.dataset.id);
+  const c = p.colors[+dot.dataset.c];
+  card.dataset.color = dot.dataset.c;
+  $(".img-a", card).src = IMG + c.views[0];
+  $(".img-b", card).src = IMG + (c.views[1] || c.views[0]);
+  $$(".dot", card).forEach((d) => d.classList.toggle("is-on", d === dot));
+}
+
+/* ---------- Gama de colores (nuevos colorways) ---------- */
+function renderColorways() {
+  const rows = [
+    { id: "set-pulse", view: 1, label: "Línea Pulse", note: "Top + leggings · 5 tonos" },
+    { id: "short-core", view: 0, label: "Línea Core", note: "Short + camiseta · 4 acentos" },
+  ];
+  $("#colorways").innerHTML = rows.map((r) => {
+    const p = PRODUCTS.find((x) => x.id === r.id);
+    return `
+      <div class="cw-row">
+        <div class="cw-head"><h3>${r.label}</h3><p>${r.note}</p></div>
+        <div class="cw-strip">
+          ${p.colors.map((c, i) => `
+            <button class="cw-item" data-open="${p.id}" data-open-color="${i}" aria-label="${p.name} en ${c.name}">
+              <img src="${IMG + c.views[r.view]}" alt="" loading="lazy" />
+              <span class="cw-label"><i class="dot" style="background:${swatchBg(c)}"></i>${c.name}</span>
+            </button>`).join("")}
+        </div>
+      </div>`;
+  }).join("");
 }
 
 function applyFilter(cat) {
@@ -222,10 +277,10 @@ function updateCta() {
   $("#pmCta").textContent = state.size ? `Consultar ${p.name} · ${state.size}` : "Consultar disponibilidad";
 }
 
-function openProduct(id) {
+function openProduct(id, color = 0) {
   const p = PRODUCTS.find((x) => x.id === id);
   if (!p) return;
-  Object.assign(state, { product: p, color: 0, size: null, index: 0 });
+  Object.assign(state, { product: p, color: Math.min(+color || 0, p.colors.length - 1), size: null, index: 0 });
   rawIndex = 0;
   const m = $("#pmodal");
   m.hidden = false;
@@ -288,10 +343,13 @@ function init() {
 
   document.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
-    if (card) return openProduct(card.dataset.id);
+    if (card) {
+      const dot = e.target.closest(".dot[data-c]");
+      return openProduct(card.dataset.id, dot ? dot.dataset.c : card.dataset.color);
+    }
 
     const opener = e.target.closest("[data-open]");
-    if (opener) { e.preventDefault(); return openProduct(opener.dataset.open); }
+    if (opener) { e.preventDefault(); return openProduct(opener.dataset.open, opener.dataset.openColor); }
 
     if (e.target.closest("[data-close]")) return closeProduct();
 
@@ -319,6 +377,11 @@ function init() {
     }
 
     if (e.target.closest("#pmCta")) closeProduct();
+  });
+
+  document.addEventListener("pointerover", (e) => {
+    const dot = e.target.closest("#productGrid .dot[data-c]");
+    if (dot) previewDot(dot);
   });
 
   $("#prevCard").addEventListener("click", () => step(-1));
