@@ -1,0 +1,537 @@
+/* =========================================================
+   CRUZFIT ACTIVE WEAR — Catálogo digital
+   Dirección: blanco y negro editorial, acentos de marca
+   (rosa Pulse + lima Core) solo donde vive el producto.
+   ========================================================= */
+
+:root {
+  --black: #070707;
+  --ink: #0e0e0e;
+  --panel: #161616;
+  --panel-2: #222;
+  --line: rgba(255,255,255,.14);
+  --white: #f6f5f1;
+  --muted: rgba(246,245,241,.62);
+  --cream: #f8f7cf;
+  --lime: #d3f36b;
+  --pink: #f0468f;
+  --radius: 26px;
+
+  --f-display: "Archivo", system-ui, sans-serif;
+  --f-poster: "Anton", "Archivo", Impact, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --f-slab: "Roboto Slab", Georgia, serif;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--f-display);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ---------- Tipografía ---------- */
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.display {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(34px, 5.2vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -.01em;
+  text-transform: uppercase;
+}
+.display--md { font-size: clamp(28px, 3.8vw, 46px); }
+.lead { color: var(--muted); font-size: clamp(16px, 1.4vw, 19px); max-width: 52ch; margin: 22px 0 0; }
+
+/* ---------- Pills / botones ---------- */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 48px; padding: 0 24px;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+  white-space: nowrap;
+}
+.pill:hover { transform: translateY(-1px); }
+.pill--light { background: var(--white); color: var(--black); }
+.pill--ghost { border-color: rgba(255,255,255,.4); color: var(--white); background: transparent; }
+.pill--ghost:hover { background: rgba(255,255,255,.08); }
+.pill--outline { border: 1.5px solid var(--black); color: var(--black); background: transparent; }
+.pill--sm { height: 40px; padding: 0 18px; font-size: 12px; }
+.pill--xs { height: 32px; padding: 0 16px; font-size: 11px; }
+.pill--block { width: 100%; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 14px var(--gutter);
+  background: rgba(7,7,7,.94);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--white); }
+.brand-icon, .brand-word, .footer-logo, .chip-icon {
+  display: block; background: currentColor;
+  -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat;
+}
+.brand-icon { --m: url(assets/brand/cruzfit-icon.svg); width: 34px; height: 32px; }
+.brand-word { --m: url(assets/brand/cruzfit-wordmark.svg); width: 104px; height: 15px; }
+.main-nav { display: flex; gap: 28px; font-size: 13px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
+.main-nav a { color: var(--muted); transition: color .2s; }
+.main-nav a:hover { color: var(--white); }
+
+/* =========================================================
+   HERO — póster tipográfico con el rostro de Francisco
+   ========================================================= */
+.hero {
+  background: #fff;
+  color: #000;
+  padding: clamp(84px, 11vw, 120px) var(--gutter) clamp(36px, 5vw, 60px);
+}
+.hero-poster {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-right: clamp(90px, 22vw, 260px);
+}
+.hero-type {
+  margin: 0;
+  font-family: var(--f-poster);
+  font-weight: 400;
+  font-size: clamp(120px, 37vw, 400px);
+  line-height: .8;
+  letter-spacing: -.012em;
+  text-transform: uppercase;
+  color: transparent;
+  background: #111 url(assets/img/hero-francisco-bw.jpg) 50% 30% / cover no-repeat;
+  -webkit-background-clip: text; background-clip: text;
+  filter: contrast(1.05);
+}
+.hero-type .l { display: block; width: max-content; }
+.hero-type .l2 { padding-left: .02em; }
+.hero-type .l4 { margin-left: .2em; }
+
+.hero-tag {
+  position: absolute; margin: 0;
+  font-family: var(--f-display);
+}
+.hero-tag--a {
+  /* junto a "FOR" — como el nombre del autor en la portada */
+  top: 25.5%; left: var(--for-end, 40%);
+  font-family: var(--f-poster);
+  font-size: clamp(16px, 3.2vw, 36px);
+  line-height: 1;
+  letter-spacing: .01em;
+}
+.hero-tag--b {
+  /* en el hueco tras "VITY" — bloque slab tipo subtítulo */
+  bottom: 4%; left: var(--vity-end, 70%);
+  display: flex; flex-direction: column;
+  font-family: var(--f-slab);
+  font-size: clamp(13px, 2.6vw, 30px);
+  line-height: 1.08;
+  text-align: left;
+}
+.hero-tag--b strong { font-weight: 800; }
+.hero-foot {
+  margin: clamp(16px, 2.6vw, 28px) 0 0;
+  font-family: var(--f-slab);
+  font-size: clamp(10px, 1.1vw, 13px);
+  letter-spacing: .12em;
+  line-height: 1.5;
+  padding-left: var(--vity-start, 40%);
+}
+
+/* =========================================================
+   STATEMENT — sección B&W tipo landing de coach
+   ========================================================= */
+.statement {
+  position: relative;
+  min-height: min(92vh, 820px);
+  display: flex; align-items: flex-end;
+  background: var(--black);
+  overflow: hidden;
+  padding: 120px 0 64px;
+}
+.statement-media { position: absolute; inset: 0; }
+.statement-media img {
+  position: absolute; right: -4%; top: 0;
+  height: 100%; width: auto; max-width: none;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.25) brightness(.55);
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse 60% 75% at 55% 40%, #000 35%, transparent 75%);
+          mask-image: radial-gradient(ellipse 60% 75% at 55% 40%, #000 35%, transparent 75%);
+}
+.statement-inner {
+  position: relative;
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: end;
+}
+.statement-side { color: var(--muted); max-width: 34ch; margin: 0 0 6px auto; font-size: 15px; }
+
+/* =========================================================
+   CATEGORÍAS — bento estilo dashboard
+   ========================================================= */
+.cats-section { padding: clamp(72px, 10vw, 130px) 0; background: var(--ink); }
+.section-head { margin-bottom: 36px; }
+.section-head--row { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+
+.bento {
+  background: #2a2a29;
+  border-radius: 34px;
+  padding: 12px;
+  box-shadow: 0 40px 100px -30px rgba(0,0,0,.8);
+}
+.bento-bar { display: flex; gap: 12px; margin-bottom: 12px; }
+.bento-tabs {
+  flex: 1; display: flex; gap: 4px;
+  background: #3a3a38; border-radius: 999px; padding: 6px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.bento-tabs::-webkit-scrollbar { display: none; }
+.bento-tabs button, .filters button {
+  border: 0; background: transparent; color: rgba(255,255,255,.66);
+  font-size: 13px; padding: 9px 18px; border-radius: 999px; white-space: nowrap;
+  transition: background .2s, color .2s;
+}
+.bento-tabs button:hover, .filters button:hover { color: #fff; }
+.bento-tabs button.is-on, .filters button.is-on { background: #fff; color: #000; font-weight: 600; }
+.bento-cta {
+  display: flex; align-items: center; gap: 10px;
+  background: #3a3a38; border-radius: 999px; padding: 6px 20px 6px 6px;
+  font-size: 13px; white-space: nowrap;
+}
+.plus {
+  display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--cream); color: #000; font-weight: 600; font-size: 18px; line-height: 1;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.7fr .45fr 2.2fr;
+  grid-template-rows: 220px 220px 1fr;
+  grid-template-areas:
+    "women stat men"
+    "women chip men"
+    "cream cream men";
+  gap: 12px;
+  min-height: 860px;
+}
+.tile {
+  position: relative; overflow: hidden;
+  border-radius: var(--radius);
+  background: #3a3a38;
+  color: #fff;
+}
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .6s; }
+.tile:hover img { transform: scale(1.04); }
+.tile--women { grid-area: women; }
+.tile--women img { object-position: 50% 22%; filter: grayscale(.15); }
+.tile--women::after, .tile--men::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.55));
+}
+.tile-text { position: absolute; left: 22px; right: 70px; bottom: 20px; z-index: 2; }
+.tile-text h3 { margin: 0; font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; letter-spacing: -.01em; }
+.tile-text p { margin: 4px 0 0; font-size: 13px; color: rgba(255,255,255,.8); max-width: 34ch; }
+.round-arrow {
+  position: absolute; right: 18px; bottom: 18px; z-index: 2;
+  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1.5px solid rgba(255,255,255,.7); font-size: 17px;
+  transition: background .2s, color .2s;
+}
+.tile:hover .round-arrow { background: #fff; color: #000; }
+.round-arrow--dark { border-color: #000; color: #000; }
+
+.tile--stat { grid-area: stat; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.tile--stat strong { font-size: clamp(40px, 4vw, 56px); font-weight: 500; line-height: 1; }
+.tile--stat span { font-size: 11px; color: rgba(255,255,255,.6); margin-top: 6px; }
+.tile--chip {
+  grid-area: chip; background: #8d8d89;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  font-size: 11px; color: #111;
+}
+.chip-icon { --m: url(assets/brand/cruzfit-icon.svg); width: 54px; height: 50px; color: var(--cream); transition: transform .4s; }
+.tile--chip:hover .chip-icon { transform: rotate(-8deg) scale(1.08); }
+
+.tile--cream {
+  grid-area: cream;
+  background: var(--cream); color: #111;
+  padding: 24px 26px 18px;
+  display: flex; flex-direction: column;
+}
+.cream-top { display: flex; justify-content: space-between; font-size: 14px; font-weight: 500; }
+.tile--cream h3 { margin: 32px 0 14px; font-size: clamp(22px, 2.3vw, 30px); line-height: 1.12; font-weight: 600; letter-spacing: -.015em; max-width: 26ch; }
+.tile--cream p { margin: 0 0 18px; font-size: 12px; max-width: 52ch; color: #333; }
+.tile--cream .pill { align-self: flex-start; }
+.tile--cream .round-arrow { bottom: 64px; }
+.cream-foot { margin-top: auto; padding-top: 16px; border-top: 1px solid #111; display: flex; justify-content: space-between; font-size: 11px; }
+.tile--cream .cream-foot { margin-top: 48px; }
+
+.tile--men { grid-area: men; background: #bfc4c8; }
+.tile--men img { object-position: 50% 30%; }
+.add-pill {
+  position: absolute; top: 18px; right: 18px; z-index: 3;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--lime); color: #000; border-radius: 999px;
+  padding: 4px 4px 4px 16px; font-size: 13px; font-weight: 500;
+}
+.add-pill .plus { background: var(--lime); border: 1.5px solid #000; width: 28px; height: 28px; }
+.tile-text--bottom { right: 46%; }
+.mini-card {
+  position: absolute; right: 14px; bottom: 14px; z-index: 3;
+  width: min(42%, 190px);
+  background: #232323; border-radius: 22px; padding: 10px 10px 12px;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: transform .3s;
+}
+.mini-card:hover { transform: translateY(-4px); }
+.mini-card img { height: 110px; border-radius: 14px; object-position: 50% 45%; }
+.mini-card p { margin: 0 4px; font-size: 14px; font-weight: 600; line-height: 1.15; }
+.mini-btn { display: block; text-align: center; background: #3a3a38; border-radius: 999px; padding: 9px; font-size: 12px; }
+
+/* =========================================================
+   CATÁLOGO
+   ========================================================= */
+.catalog { padding: clamp(72px, 10vw, 130px) 0; background: var(--black); }
+.filters { display: flex; flex-wrap: wrap; gap: 4px; background: #1c1c1c; padding: 6px; border-radius: 999px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+.card {
+  position: relative; display: flex; flex-direction: column;
+  background: var(--panel); border-radius: 22px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.05);
+  text-align: left; padding: 0; color: var(--white);
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .3s;
+  animation: cardIn .5s both;
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.18); }
+.card[hidden] { display: none; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px); } }
+.card-media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #222; }
+.card-media img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: opacity .6s, transform .9s cubic-bezier(.2,.7,.2,1), filter .6s;
+}
+.card-media .img-a { filter: grayscale(1) contrast(1.08); }
+.card-media .img-b { opacity: 0; }
+.card:hover .img-a { filter: grayscale(0); }
+.card:hover .img-b { opacity: 1; transform: scale(1.03); }
+.card-badge {
+  position: absolute; top: 14px; left: 14px; z-index: 2;
+  font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; text-transform: uppercase;
+  background: rgba(0,0,0,.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  padding: 6px 10px; border-radius: 999px;
+}
+.card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+.card-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.card h3 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+.card .meta { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.card-dots { display: flex; gap: 6px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,.35); }
+.card-go { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.card-go::after { content: "→"; transition: transform .25s; }
+.card:hover .card-go::after { transform: translateX(4px); }
+
+/* =========================================================
+   MARCA — B&W
+   ========================================================= */
+.brand-sec { position: relative; overflow: hidden; padding: clamp(90px, 12vw, 160px) 0; background: #000; }
+.brand-media { position: absolute; inset: 0; }
+.brand-media img {
+  position: absolute; left: 50%; top: 0; transform: translateX(-30%);
+  height: 100%; width: auto; max-width: none;
+  filter: grayscale(1) contrast(1.3) brightness(.5);
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse 45% 70% at 50% 40%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(ellipse 45% 70% at 50% 40%, #000 30%, transparent 75%);
+}
+.brand-inner { position: relative; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: end; }
+.features { list-style: none; margin: 0; padding: 0; display: grid; gap: 30px; }
+.features h3 { margin: 0 0 8px; font-size: 19px; font-weight: 600; }
+.features p { margin: 0; color: var(--muted); font-size: 15px; max-width: 40ch; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--black); border-top: 1px solid var(--line); padding: 64px 0 36px; }
+.footer-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: end; }
+.footer-logo { --m: url(assets/brand/cruzfit-logo.svg); width: 160px; height: 92px; color: var(--white); }
+.footer-brand p { margin: 8px 0 0; font-size: 11px; letter-spacing: .3em; color: var(--muted); padding-left: 32px; }
+.footer-cta { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+.footer-legal { grid-column: 1 / -1; margin: 24px 0 0; font-size: 12px; color: var(--muted); }
+
+/* =========================================================
+   MODAL DE PRODUCTO — galería 3D de paneles flotantes
+   ========================================================= */
+.pmodal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; }
+.pmodal[hidden] { display: none; }
+.pmodal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.82); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); animation: fade .3s; }
+@keyframes fade { from { opacity: 0; } }
+.pmodal-panel {
+  position: relative;
+  width: min(1240px, calc(100vw - 24px));
+  height: min(820px, calc(100vh - 24px));
+  height: min(820px, calc(100dvh - 24px));
+  display: grid; grid-template-columns: 1.55fr 1fr;
+  background: #000; border-radius: 28px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  animation: pop .45s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes pop { from { opacity: 0; transform: translateY(20px) scale(.98); } }
+.pmodal-close {
+  position: absolute; top: 14px; right: 14px; z-index: 5;
+  width: 40px; height: 40px; border-radius: 50%; border: 0;
+  background: #fff; color: #000; font-size: 15px;
+}
+
+.stage {
+  position: relative; overflow: hidden;
+  perspective: 1500px; perspective-origin: 50% 45%;
+  background: radial-gradient(ellipse at 50% 60%, #151515, #000 70%);
+  cursor: grab; touch-action: pan-y;
+}
+.stage.is-drag { cursor: grabbing; }
+.ring {
+  position: absolute; left: 50%; top: 46%;
+  width: 0; height: 0;
+  transform-style: preserve-3d;
+  transition: transform .9s cubic-bezier(.2,.75,.2,1);
+}
+.ring.no-anim { transition: none; }
+.panel3d {
+  position: absolute;
+  width: var(--cw); height: calc(var(--cw) * 1.22);
+  left: calc(var(--cw) / -2); top: calc(var(--cw) * -0.61);
+  background: #f4f3ef; color: #0a0a0a;
+  padding: calc(var(--cw) * .05);
+  display: flex; flex-direction: column;
+  backface-visibility: visible;
+  box-shadow: 0 30px 60px rgba(0,0,0,.6);
+  transition: filter .6s;
+}
+.panel3d.is-back { filter: brightness(.38); }
+.panel3d h4 {
+  margin: 0;
+  font-family: var(--f-display); font-weight: 800;
+  font-size: calc(var(--cw) * .1); line-height: .95; letter-spacing: -.03em; text-transform: uppercase;
+}
+.panel3d .pcols {
+  display: grid; grid-template-columns: 1fr 1.6fr; gap: calc(var(--cw) * .04);
+  margin: calc(var(--cw) * .04) 0;
+  font-family: var(--f-mono); font-size: calc(var(--cw) * .028); line-height: 1.35; color: #333;
+}
+.panel3d .pcols p { margin: 0; }
+.panel3d .pimg { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr); gap: 6px; overflow: hidden; }
+.panel3d .pimg img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 50% 30%; }
+.panel3d.is-spec .pimg { grid-template-columns: 1.4fr 1fr; }
+.panel3d .pnum { position: absolute; right: calc(var(--cw) * .05); bottom: calc(var(--cw) * .025); font-family: var(--f-mono); font-size: calc(var(--cw) * .026); color: #fff; mix-blend-mode: difference; }
+
+.stage-ctrl {
+  position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,255,255,.08); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-radius: 999px; padding: 6px;
+  font-family: var(--f-mono); font-size: 12px;
+}
+.stage-ctrl button { width: 38px; height: 38px; border-radius: 50%; border: 0; background: #fff; color: #000; font-size: 16px; }
+
+.pinfo { padding: 40px 32px 28px; overflow-y: auto; background: var(--ink); display: flex; flex-direction: column; gap: 22px; }
+.pinfo h2 { margin: -12px 0 0; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.05; font-weight: 600; letter-spacing: -.02em; text-transform: uppercase; }
+.pinfo .eyebrow { margin: 0; }
+.pdesc { margin: 0; color: var(--muted); font-size: 15px; }
+.olabel { margin: 0 0 10px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.olabel span { color: var(--white); }
+.swatches, .sizes, .thumbs { display: flex; flex-wrap: wrap; gap: 8px; }
+.swatch {
+  width: 36px; height: 36px; border-radius: 50%; padding: 0;
+  border: 2px solid transparent; outline: 1px solid rgba(255,255,255,.25); outline-offset: 2px;
+  position: relative; overflow: hidden;
+}
+.swatch.is-on { outline: 2px solid #fff; }
+.size {
+  min-width: 48px; height: 40px; padding: 0 12px;
+  border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: transparent; font-size: 13px;
+}
+.size.is-on { background: #fff; color: #000; border-color: #fff; font-weight: 600; }
+.thumb { width: 58px; height: 72px; padding: 0; border: 1px solid transparent; border-radius: 10px; overflow: hidden; background: #222; opacity: .55; transition: opacity .2s; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb.is-on { opacity: 1; border-color: #fff; }
+.pspecs { list-style: none; margin: 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: grid; gap: 8px; font-size: 14px; color: var(--muted); }
+.pspecs li::before { content: "— "; color: var(--white); }
+.pinfo .pill--block { margin-top: auto; flex-shrink: 0; }
+
+body.is-locked { overflow: hidden; }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pmodal-panel { grid-template-columns: 1fr; grid-template-rows: 52% 1fr; }
+  .pinfo { padding: 26px 20px 20px; }
+}
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+  .statement-inner, .brand-inner, .footer-inner { grid-template-columns: 1fr; }
+  .statement-side { margin: 0; }
+  .statement-media img { right: -30%; }
+  .brand-media img { transform: translateX(-50%); }
+
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 420px 130px auto 560px;
+    grid-template-areas:
+      "women women"
+      "stat chip"
+      "cream cream"
+      "men men";
+    min-height: 0;
+  }
+  .bento-cta { display: none; }
+}
+@media (max-width: 560px) {
+  .hero-poster { padding-right: 0; }
+  .hero-type { font-size: 39.5vw; }
+  .hero-tag--a { font-size: 4.6vw; }
+  .hero-tag--b { font-size: 3.3vw; bottom: 2%; }
+  .statement-media img { filter: grayscale(1) contrast(1.25) brightness(.38); }
+  .grid { grid-template-columns: 1fr; }
+  .hero-foot { padding-left: 0; }
+  .bento { border-radius: 26px; padding: 8px; }
+  .bento-grid { gap: 8px; grid-template-rows: 380px 110px auto 520px; }
+  .tile--cream h3 { margin-top: 22px; }
+  .tile-text--bottom { right: 50%; }
+  .mini-card { width: 44%; }
+  .mini-card img { height: 84px; }
+  .filters { width: 100%; justify-content: space-between; }
+  .filters button { padding: 8px 10px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

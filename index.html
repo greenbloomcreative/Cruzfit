@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cruzfit Active Wear — Catálogo</title>
+  <meta name="description" content="Catálogo digital Cruzfit Active Wear. Ropa deportiva para mujer y hombre. Train for longevity." />
+  <link rel="icon" href="assets/brand/cruzfit-icon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Roboto+Slab:wght@400;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Cruzfit inicio">
+      <span class="brand-icon" aria-hidden="true"></span>
+      <span class="brand-word" aria-hidden="true"></span>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#categorias">Categorías</a>
+      <a href="#catalogo" data-filter-link="mujer">Mujer</a>
+      <a href="#catalogo" data-filter-link="hombre">Hombre</a>
+      <a href="#marca">Marca</a>
+    </nav>
+    <a class="pill pill--light pill--sm" href="#catalogo">Catálogo</a>
+  </header>
+
+  <main>
+    <!-- ========== HERO: TIPOGRAFÍA + ROSTRO (FRANCISCO) ========== -->
+    <section class="hero" aria-label="Train for longevity">
+      <div class="hero-poster">
+        <h1 class="hero-type" aria-label="Train for longevity">
+          <span class="l l1">TRAIN</span>
+          <span class="l l2">FOR</span>
+          <span class="l l3">LONGE</span>
+          <span class="l l4">VITY</span>
+        </h1>
+        <p class="hero-tag hero-tag--a">CRUZFIT<br/>ACTIVE&nbsp;WEAR</p>
+        <p class="hero-tag hero-tag--b">
+          <span>Colección</span>
+          <span>Core &amp; Pulse</span>
+          <strong>Mujer</strong>
+          <strong>Hombre</strong>
+        </p>
+        <p class="hero-foot">CATÁLOGO DIGITAL · 2026<br/>EDICIÓN 01</p>
+      </div>
+    </section>
+
+    <!-- ========== STATEMENT (B&W) ========== -->
+    <section class="statement">
+      <div class="statement-media" aria-hidden="true">
+        <img src="assets/img/men-bw.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="statement-inner wrap">
+        <div class="statement-copy">
+          <p class="eyebrow">Cruzfit Active Wear</p>
+          <h2 class="display">Entrena hoy.<br/>Muévete siempre.</h2>
+          <p class="lead">Ropa deportiva pensada para sostener tu ritmo: compresión que acompaña, tejidos que respiran y cortes que no se mueven cuando tú sí.</p>
+          <div class="btns">
+            <a class="pill pill--light" href="#catalogo">Ver catálogo</a>
+            <a class="pill pill--ghost" href="#categorias">Categorías</a>
+          </div>
+        </div>
+        <p class="statement-side">Sin atajos. Sin distracciones. Solo piezas diseñadas para entrenar con constancia y durar tanto como tu disciplina.</p>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORÍAS (BENTO) ========== -->
+    <section class="cats-section" id="categorias">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Categorías</p>
+          <h2 class="display display--md">Encuentra tu equipo</h2>
+        </div>
+
+        <div class="bento">
+          <div class="bento-bar">
+            <nav class="bento-tabs" aria-label="Categorías">
+              <button class="is-on" data-cat="todo">Todo</button>
+              <button data-cat="mujer">Mujer</button>
+              <button data-cat="hombre">Hombre</button>
+              <button data-cat="tops">Tops</button>
+              <button data-cat="bottoms">Bottoms</button>
+              <button data-cat="sets">Sets</button>
+            </nav>
+            <a class="bento-cta" href="#catalogo"><span class="plus">+</span> Ver todo</a>
+          </div>
+
+          <div class="bento-grid">
+            <a class="tile tile--women" href="#catalogo" data-cat-go="mujer">
+              <img src="assets/img/women-stretch.jpg" alt="Modelo con top y leggings Pulse en rosa" loading="lazy" />
+              <div class="tile-text">
+                <h3>Mujer</h3>
+                <p>Línea Pulse: tops y leggings de tiro alto con soporte y compresión.</p>
+              </div>
+              <span class="round-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <div class="tile tile--stat">
+              <strong id="statCount">06</strong>
+              <span>piezas</span>
+            </div>
+            <a class="tile tile--chip" href="#catalogo" data-cat-go="sets">
+              <span class="chip-icon" aria-hidden="true"></span>
+              <span>sets</span>
+            </a>
+
+            <div class="tile tile--cream">
+              <div class="cream-top"><span>Recomendado</span><span aria-hidden="true">•••</span></div>
+              <h3>El set Pulse: rosa intenso, costuras de compresión y un tiro alto que no se baja en ninguna sentadilla.</h3>
+              <p>Top de soporte medio con panel de malla y leggings sin costuras laterales. Diseñados para moverse juntos, de la primera a la última repetición.</p>
+              <button class="pill pill--outline pill--xs" data-open="set-pulse">Ver set</button>
+              <span class="round-arrow round-arrow--dark" aria-hidden="true">↗</span>
+              <div class="cream-foot"><span>Guía de tallas</span><a href="#catalogo">Siguiente</a></div>
+            </div>
+
+            <a class="tile tile--men" href="#catalogo" data-cat-go="hombre">
+              <img src="assets/img/men-front.jpg" alt="Francisco con camiseta de compresión y short Core" loading="lazy" />
+              <span class="add-pill">Hombre <span class="plus">+</span></span>
+              <div class="tile-text tile-text--bottom">
+                <h3>Hombre</h3>
+                <p>Línea Core: compresión negra con detalles lima.</p>
+              </div>
+              <div class="mini-card" data-open="short-core" role="button" tabindex="0">
+                <img src="assets/img/shorts-detail.jpg" alt="" loading="lazy" />
+                <p>Descubre<br/>el short Core</p>
+                <span class="mini-btn">Ver producto</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATÁLOGO ========== -->
+    <section class="catalog" id="catalogo">
+      <div class="wrap">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Catálogo</p>
+            <h2 class="display display--md">Colección 01</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar productos">
+            <button class="is-on" data-filter="todo">Todo</button>
+            <button data-filter="mujer">Mujer</button>
+            <button data-filter="hombre">Hombre</button>
+            <button data-filter="tops">Tops</button>
+            <button data-filter="bottoms">Bottoms</button>
+            <button data-filter="sets">Sets</button>
+          </div>
+        </div>
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ========== MARCA (B&W) ========== -->
+    <section class="brand-sec" id="marca">
+      <div class="brand-media" aria-hidden="true">
+        <img src="assets/img/women-bw.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="wrap brand-inner">
+        <div>
+          <p class="eyebrow">Sobre la marca</p>
+          <h2 class="display">Tu nuevo<br/>compañero de<br/>entrenamiento</h2>
+          <p class="lead">Cruzfit nace para quienes entrenan en serio y a largo plazo. Cada pieza se prueba con movimiento real: sentadillas, sprints, estiramientos. Si no aguanta el entrenamiento, no entra al catálogo.</p>
+        </div>
+        <ul class="features">
+          <li><h3>Compresión estructurada</h3><p>Zonas de soporte mapeadas para estabilizar sin limitar el rango de movimiento.</p></li>
+          <li><h3>Tejido transpirable</h3><p>Paneles de malla donde más calor se genera, para entrenar más tiempo con menos fatiga.</p></li>
+          <li><h3>Hecho para durar</h3><p>Costuras reforzadas y color que resiste lavados. Entrena por la longevidad, viste igual.</p></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" id="contacto">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo" aria-hidden="true"></span>
+        <p>ACTIVE WEAR</p>
+      </div>
+      <div class="footer-cta">
+        <h2 class="display display--md">Train for longevity.</h2>
+        <a class="pill pill--light" href="#catalogo">Ver catálogo</a>
+      </div>
+      <p class="footer-legal">© 2026 Cruzfit Active Wear. Catálogo digital.</p>
+    </div>
+  </footer>
+
+  <!-- ========== MODAL DE PRODUCTO (GALERÍA 3D) ========== -->
+  <div class="pmodal" id="pmodal" hidden>
+    <div class="pmodal-backdrop" data-close></div>
+    <div class="pmodal-panel" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+      <button class="pmodal-close" data-close aria-label="Cerrar">✕</button>
+      <div class="stage" id="stage">
+        <div class="ring" id="ring"></div>
+        <div class="stage-ctrl">
+          <button id="prevCard" aria-label="Vista anterior">←</button>
+          <span id="stageCount">01 / 04</span>
+          <button id="nextCard" aria-label="Vista siguiente">→</button>
+        </div>
+      </div>
+      <div class="pinfo">
+        <p class="eyebrow" id="pmLine">Línea</p>
+        <h2 id="pmTitle">Producto</h2>
+        <p class="pdesc" id="pmDesc"></p>
+        <div class="popt">
+          <p class="olabel">Color · <span id="pmColorName"></span></p>
+          <div class="swatches" id="pmSwatches"></div>
+        </div>
+        <div class="popt">
+          <p class="olabel">Talla</p>
+          <div class="sizes" id="pmSizes"></div>
+        </div>
+        <div class="popt">
+          <p class="olabel">Vistas</p>
+          <div class="thumbs" id="pmThumbs"></div>
+        </div>
+        <ul class="pspecs" id="pmSpecs"></ul>
+        <a class="pill pill--light pill--block" id="pmCta" href="#contacto">Consultar disponibilidad</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
